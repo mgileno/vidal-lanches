@@ -1,5 +1,5 @@
 from .models import Loja, Produto, Categoria, Promocao
-from .serializers import LojaSerializer, ProdutoSerializer, CategoriaSerializer, ProdutoSerializer
+from .serializers import LojaSerializer, ProdutoSerializer, CategoriaSerializer, PromocaoSerializer
 from django.http import Http404
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
