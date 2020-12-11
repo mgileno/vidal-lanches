@@ -1,0 +1,45 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+}
+body {
+    background: #f77847;
+    font-family: 'Ubuntu',sans-serif;
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px 0;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2);
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+.content {
+    background: #fff;
+}
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #666;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+p {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0 20px;
+}
+li {
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+    color: #777;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
