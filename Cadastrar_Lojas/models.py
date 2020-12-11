@@ -6,6 +6,10 @@ class Loja(models.Model):
     cidade = models.CharField(max_length=150)
     estado = models.CharField(max_length=2)
     email = models.CharField(max_length=200) 
+
+    class Meta:
+        verbose_name = ("Loja")
+        verbose_name_plural = ("Lojas")
     
     def __str__(self):
         return self.loja #retorna o nome da loja

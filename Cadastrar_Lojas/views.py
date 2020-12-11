@@ -41,6 +41,13 @@ class CategoriaDetail(APIView):
         serializer = CategoriaSerializer(categoria)
         return Response(serializer.data)
 
+    def post(self, request, format=None):
+        serializer = CategoriaSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def put(self, request, pk, format=None):
         categoria = self.get_object(pk)
         serializer = CategoriaSerializer(categoria, data=request.data)
@@ -69,8 +76,8 @@ class LojaList(APIView):
     def get(self, request, format=None):
         get_data = request.query_params
         loja = Loja.objects.all()
-        if 'categoria' in get_data:
-            loja = Loja.filter(categoria=get_data.get('categoria'))        
+        if 'loja' in get_data:
+            loja = loja.filter(loja=get_data.get('loja'))        
         serializer = LojaSerializer(loja, many=True)
         return Response(serializer.data)
 
