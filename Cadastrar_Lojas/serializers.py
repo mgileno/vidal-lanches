@@ -20,11 +20,11 @@ class ProdutoSerializer(serializers.ModelSerializer):
     # Produto = serializers.SlugRelatedField(many=False, read_only=False, queryset=Produto.objects.all(),slug_field='produto') 
     class Meta:
         model = Produto
-        fields = ['produto', 'imagem', 'descrição', 'categoria']
+        fields = ['produto', 'imagem', 'descricao', 'categoria']
 
 class PromocaoSerializer(serializers.ModelSerializer):   
     # permite trazer o campo do objeto e não o ID
     # Promocao = serializers.SlugRelatedField(many=False, read_only=False, queryset=Promocao.objects.all(),slug_field='promo') 
     class Meta:
         model = Promocao
-        fields = ['promo', 'loja', 'preço', 'cupom','destaque']
+        fields = ['promo', 'loja', 'preco', 'cupom','destaque']
